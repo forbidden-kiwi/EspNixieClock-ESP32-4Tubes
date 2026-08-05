@@ -17,7 +17,7 @@ Companion project: [EspNixieClock-ESP8266-6Tubes](https://github.com/forbidden-k
 
 - ESP32-based (Arduino IDE), board: **Waveshare ESP32-C6-LCD-1.47** (ST7789 320×172)
 - NTP time synchronisation
-- Captive-portal WiFi setup — **store up to 2 WiFi credentials** (MultiWiFi / ESP_WiFiManager)
+- Captive-portal WiFi setup — **store up to 2 WiFi credentials** (MultiWiFi / ESP_WiFiManager) on **SPIFFS**
 - TFT + encoder menus: timezone, Auto DST (regional rules), 12/24h, colon blink, leading zero
 - WS2812 tube backlight: rainbow, color cycle, static colors, brightness
 - Independent 60-LED seconds ring: off / fill / dot, color and brightness
@@ -31,26 +31,27 @@ Companion project: [EspNixieClock-ESP8266-6Tubes](https://github.com/forbidden-k
 1. Download the latest [release ZIP](https://github.com/forbidden-kiwi/EspNixieClock-ESP32-4Tubes/releases) (includes libraries).
 2. Copy `Software/libraries/*` into your Arduino sketchbook `libraries` folder.
 3. Open `Software/EspNC/EspNC.ino` in Arduino IDE.
-4. Select the Arduino IDE **Tools** settings for the Waveshare ESP32-C6 LCD board (see below), then upload.
-5. Connect to the WiFi portal shown on the TFT and save up to two networks.
+4. Select board settings as below (Waveshare ESP32-C6-LCD-1.47 demo defaults).
+5. Upload; connect to the WiFi portal shown on the TFT and save up to two networks.
 
 Pin map: `Software/EspNC/Globals.h`.
 
-#### Arduino IDE — board settings (Waveshare ESP32-C6-LCD-1.47)
+### Arduino IDE board settings
 
-![Arduino IDE Tools settings](Images/Arduino_IDE_ESP32-C6_LCD_1.47_Tools_Settings.webp)
+Recommended Tools menu settings for **Waveshare ESP32-C6-LCD-1.47**:
 
-Use at least:
+![Arduino IDE settings](Images/Arduino_IDE_ESP32C6_Settings.webp)
 
 | Setting | Value |
 |--------|--------|
-| Board | **ESP32C6 Dev Module** |
-| USB CDC On Boot | **Enabled** |
-| Flash Size | **8MB (64Mb)** (as on Waveshare) |
+| Board | ESP32C6 Dev Module |
+| USB CDC On Boot | Enabled |
+| Flash Size | 8MB (64Mb) |
+| Partition Scheme | **8M with spiffs (3MB APP/1.5MB SPIFFS)** |
 
-WiFi credentials in this firmware are stored on **FFat**. Prefer a partition scheme that includes FATFS (for example **No OTA (2MB APP / 2MB FATFS)**). The Waveshare demo screenshot above shows an SPIFFS scheme — that works for their demos, but EspNC needs FFat for MultiWiFi.
+WiFi MultiWiFi credentials are stored on the **SPIFFS** partition — match the partition scheme above.
 
-Reference image from the [Waveshare ESP32-C6 LCD documentation](https://www.waveshare.com/wiki/ESP32-C6-LCD-1.47).
+Image source: [Waveshare ESP32-C6-LCD-1.47 documentation](https://www.waveshare.com/wiki/ESP32-C6-LCD-1.47).
 
 ### License
 

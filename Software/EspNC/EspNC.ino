@@ -3325,7 +3325,7 @@ void formatShutoffTime(char* buf, size_t buflen, int fifteenMin) {
 }
 
 /**
- * Reset MultiWiFi credentials (FFat + ESP flash) and restart.
+ * Reset MultiWiFi credentials (SPIFFS + ESP flash) and restart.
  * After reboot the captive portal opens so new networks can be saved.
  */
 void resetWiFi() {

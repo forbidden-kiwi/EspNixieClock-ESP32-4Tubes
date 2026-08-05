@@ -5,10 +5,11 @@
 #include <WiFiClient.h>
 #include <DNSServer.h>
 #include <WebServer.h>
-#include <FFat.h>
+#include <SPIFFS.h>
 
 // ESP_WiFiManager compile-time options (must precede the include)
 #define USE_LITTLEFS                  false
+#define USE_SPIFFS                    true
 #define USE_AVAILABLE_PAGES           false
 #define USE_ESP_WIFIMANAGER_NTP       false
 #define USE_CLOUDFLARE_NTP            false
@@ -85,7 +86,7 @@ static uint16_t calcChecksum(const uint8_t* data, uint16_t len) {
 static bool loadConfigData() {
     memset(&WM_config, 0, sizeof(WM_config));
 
-    File file = FFat.open(CONFIG_FILENAME, "r");
+    File file = SPIFFS.open(CONFIG_FILENAME, "r");
     if (!file) {
         return false;
     }
@@ -112,7 +113,7 @@ static void saveConfigData() {
     WM_config.checksum = calcChecksum((uint8_t*)&WM_config,
                                       sizeof(WM_config) - sizeof(WM_config.checksum));
 
-    File file = FFat.open(CONFIG_FILENAME, "w");
+    File file = SPIFFS.open(CONFIG_FILENAME, "w");
     if (!file) {
         return;
     }
@@ -122,8 +123,8 @@ static void saveConfigData() {
 
 static void clearConfigData() {
     memset(&WM_config, 0, sizeof(WM_config));
-    if (FFat.exists(CONFIG_FILENAME)) {
-        FFat.remove(CONFIG_FILENAME);
+    if (SPIFFS.exists(CONFIG_FILENAME)) {
+        SPIFFS.remove(CONFIG_FILENAME);
     }
 }
 
@@ -248,7 +249,7 @@ static void finishAfterPortal(ESP_WiFiManager& wifiManager) {
 bool wifiProvisionBegin(const char* apName, const char* apPassword,
                         unsigned long portalTimeoutSec,
                         WifiPortalCallback onPortal) {
-    if (!FFat.begin(true)) {
+    if (!SPIFFS.begin(true)) {
         return false;
     }
 
@@ -349,8 +350,8 @@ void wifiProvisionLoop() {
 }
 
 void wifiProvisionReset() {
-    if (!FFat.begin(true)) {
-        FFat.begin(true);
+    if (!SPIFFS.begin(true)) {
+        SPIFFS.begin(true);
     }
     clearConfigData();
 
