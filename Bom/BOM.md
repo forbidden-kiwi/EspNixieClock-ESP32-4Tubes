@@ -1,10 +1,10 @@
- Bill of Materials ÔÇö EspNixie IN-17 (4 tubes)
+# Bill of Materials — EspNixie IN-17 (4 tubes)
 
 Parts for the main clock PCB and Seconds Ring PCB. Source CSV: [`EspNixieIn17.csv`](EspNixieIn17.csv).
 
-The **60├ù WS2812 (1010)** LEDs belong to the [seconds ring PCB](../Gerber/Neopixel-1010-Ring-Gerber.zip). Tube backlight uses **SK6812MINI** (D1ÔÇôD4) on the main board.
+The **60× WS2812 (1010)** LEDs belong to the [seconds ring PCB](../Gerber/Neopixel-1010-Ring-Gerber.zip). Tube backlight uses **SK6812MINI** (D1–D4) on the main board.
 
-Supplier links (Mouser, AliExpress, Waveshare) are convenience lookups only. Listings can change, go out of stock, or move ÔÇö they may not work when you read this. Always verify part number, package, and voltage rating before ordering.
+Supplier links (Mouser, AliExpress, Waveshare) are convenience lookups only. Listings can change, go out of stock, or move — they may not work when you read this. Always verify part number, package, and voltage rating before ordering.
 
 ## Capacitors
 
@@ -34,9 +34,9 @@ Supplier links (Mouser, AliExpress, Waveshare) are convenience lookups only. Lis
 
 | Ref | Value | Qty | Mouser |
 |-----|-------|-----|--------|
-| NX1ÔÇôNX4 | IN-17 Nixie Tube | 4 | ÔÇö |
+| NX1–NX4 | IN-17 Nixie Tube | 4 | — |
 | DS1, DS2 | A1C | 2 | [606-A1C-T](https://www.mouser.com/ProductDetail/606-A1C-T) |
-| D1ÔÇôD4 | SK6812MINI | 4 | ÔÇö |
+| D1–D4 | SK6812MINI | 4 | — |
 
 ## Nixie Power Supply
 
@@ -55,6 +55,7 @@ Supplier links (Mouser, AliExpress, Waveshare) are convenience lookups only. Lis
 | Ref | Value | Qty | Aliexpress |
 |-----|-------|-----|--------|
 | ENC1 | KY-040 Rotary Encoder Module | 1 | [Aliexpress](https://www.aliexpress.com/item/1005005131093331.html) |
+
 ## Waveshare ESP32-C6 1.47inch Display Development Board
 
 | Ref | Qty | Waveshare |
