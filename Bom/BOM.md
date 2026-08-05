@@ -30,7 +30,7 @@ Mouser links are convenience lookups — verify package and voltage rating befor
 | U2, U3 | HV5622PG-G | — | 2 | [689-HV5622PG-G](https://www.mouser.com/ProductDetail/689-HV5622PG-G) |
 | U4 | CD4504BM | — | 1 | [595-CD4504BM](https://www.mouser.com/ProductDetail/595-CD4504BM) |
 
-## Displays / indicators
+## Nixies / Dots / Backlight
 
 | Ref | Value | Footprint | Qty | Mouser |
 |-----|-------|-----------|-----|--------|
