@@ -38,9 +38,10 @@ void wifiProvisionRequestReconnect();
 bool wifiProvisionReconnectIdle();
 
 /**
- * Clear SPIFFS MultiWiFi credentials and ESP flash WiFi settings, then restart.
+ * Clear FFat MultiWiFi credentials and ESP flash WiFi settings, then restart.
  * Used by the "Reset Wifi" menu item.
  */
 void wifiProvisionReset();
 
 #endif
+

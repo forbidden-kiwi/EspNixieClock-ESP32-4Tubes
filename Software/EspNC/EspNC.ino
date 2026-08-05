@@ -1,4 +1,4 @@
-/*
+﻿/*
  * ESP Nixie Clock
  *
  * This program is free software: you can redistribute it and/or modify
@@ -82,7 +82,7 @@ static bool lastTftSet12_24 = true;
 static bool lastTftEnableDst = false;
 static bool lastTftDstActive = false;
 
-// Encoder and button pins (Waveshare ESP32-C6 — see Globals.h)
+// Encoder and button pins (Waveshare ESP32-C6 â€” see Globals.h)
 const int encoderPinA = PIN_ENCODER_A;
 const int encoderPinB = PIN_ENCODER_B;
 const int encoderButtonPin = PIN_ENCODER_BUTTON;
@@ -166,7 +166,7 @@ uint8_t datePhase = 0;             // 0 = DD/MM or MM/DD, 1 = YYYY
 int waitTime = 100; // crossfade step delay (ms)
 
 // Date sequence: hold time per frame is independent of crossfade (~0.8s each)
-// Cathode protect ~5s from :00; +2s buffer → start not allowed in 0..6
+// Cathode protect ~5s from :00; +2s buffer â†’ start not allowed in 0..6
 #define DATE_START_MIN_SEC 7
 #define DATE_CROSSFADE_BUDGET_SEC 3
 
@@ -300,7 +300,7 @@ static const int SS_LOGO_W = 4 * SS_LOGO_LETTER_PITCH + NIXIE_WIDTH; // 89
 static const int SS_BLOCK_H = NIXIE_HEIGHT + 8 + TFT_MENU_ROW_STEP;
 static int16_t ssBlockW = 120;
 
-// TOP screen: 2× logo + clock rows below (separate from menu clockRowY)
+// TOP screen: 2Ã— logo + clock rows below (separate from menu clockRowY)
 #define TOP_LOGO_SCALE 2
 #define TOP_LOGO_H (NIXIE_HEIGHT * TOP_LOGO_SCALE)
 #define TOP_LOGO_PITCH (SS_LOGO_LETTER_PITCH * TOP_LOGO_SCALE)
@@ -566,7 +566,7 @@ static void composeStampField(int16_t* x, int16_t rowInBand, const char* text, b
 // Right-side value that always draws (ignores nav-scroll skip flags).
 static void printMenuValueRightAlwaysColor(const char* value, int16_t y, bool highlight,
                                            uint16_t fgColor) {
-    // Clear through the right margin — "*" phantoms otherwise remain past CONTENT_W.
+    // Clear through the right margin â€” "*" phantoms otherwise remain past CONTENT_W.
     const int16_t gx = (int16_t)(SCREEN_WIDTH - DISP_MARGIN_X - MENU_VALUE_GUTTER_W);
     const int16_t gw = (int16_t)(SCREEN_WIDTH - gx);
     if (value == nullptr || value[0] == '\0') {
@@ -606,7 +606,7 @@ static uint16_t ws2812To565(uint32_t c) {
     g = (uint8_t)((uint16_t)g * 255 / mx);
     b = (uint8_t)((uint16_t)b * 255 / mx);
 
-    // Blue-dominant with a red foot → push toward violet/purple on the panel.
+    // Blue-dominant with a red foot â†’ push toward violet/purple on the panel.
     if (b >= 200 && g < 60 && r > 15 && r < 160) {
         const int boost = 70 + ((160 - (int)r) / 2);
         int nr = (int)r + boost;
@@ -762,7 +762,7 @@ static void drawTopDateLine() {
 }
 
 void drawUtcOffsetPreview() {
-    // One row below the UTC±n line (itself below the title) for clearer spacing.
+    // One row below the UTCÂ±n line (itself below the title) for clearer spacing.
     drawTopTimeLineAt(menuRowY(2));
     drawTopDateLineAt(menuRowY(3));
 }
@@ -1160,7 +1160,7 @@ void renderScreensaverFrame() {
 void updateScreensaverBounce() {
     static unsigned long lastMoveMs = 0;
     unsigned long nowMs = millis();
-    // ~25 fps — scanline updates keep SPI load manageable.
+    // ~25 fps â€” scanline updates keep SPI load manageable.
     if ((uint32_t)(nowMs - lastMoveMs) < 40) {
         return;
     }
@@ -1217,7 +1217,7 @@ void loop() {
     bool wasWifiConnected = wifiConnected;
     wifiConnected = wifiProvisionConnected();
 
-    // NTP every 2 hours. WiFi reconnect only when a sync is due and the link is down —
+    // NTP every 2 hours. WiFi reconnect only when a sync is due and the link is down â€”
     // async WiFi.begin, not a blocking scan loop.
     static unsigned long lastNtpUpdate = 0;
     static bool ntpReconnectStarted = false;
@@ -1235,7 +1235,7 @@ void loop() {
             wifiProvisionRequestReconnect();
             ntpReconnectStarted = true;
         }
-        // Finished credential pass without a link — wait until next NTP window
+        // Finished credential pass without a link â€” wait until next NTP window
         if (ntpReconnectStarted && wifiProvisionReconnectIdle()) {
             lastNtpUpdate = millis();
             ntpReconnectStarted = false;
@@ -1419,7 +1419,7 @@ void displayTime(bool forceTft) {
         hourBcd = 255;
         minBcd = 255;
         hv_supply.switchOff();
-        // Do not clear LED_effect here — updateLEDs() already blanks pixels when
+        // Do not clear LED_effect here â€” updateLEDs() already blanks pixels when
         // !nixieOn, and zeroing would move the LED-menu "*" to Disable.
         colonBlinkState = false;
     }
@@ -1632,7 +1632,7 @@ void displayDate() {
         hourBcd = 255;
         minBcd = 255;
         hv_supply.switchOff();
-        // Do not clear LED_effect — see displayTime().
+        // Do not clear LED_effect â€” see displayTime().
     }
 
     if (transitionToDate == false) {
@@ -1808,7 +1808,7 @@ void syncLedRadioMarkFromEffect(void) {
 }
 
 static void drawRadioMarkAt(int16_t y, bool on) {
-    // Clear the whole value gutter on radio rows — removes phantoms from older * positions.
+    // Clear the whole value gutter on radio rows â€” removes phantoms from older * positions.
     const int16_t gx = (int16_t)(SCREEN_WIDTH - DISP_MARGIN_X - MENU_VALUE_GUTTER_W);
     const int16_t gw = (int16_t)(SCREEN_WIDTH - gx);
     const int16_t markX = (int16_t)(SCREEN_WIDTH - DISP_MARGIN_X - 10);
@@ -1838,7 +1838,7 @@ static void refreshLedColorCycleLabelAnim(void) {
     if (menu != LED_MENU && menu != STATIC_COLOR && menu != LED_BRIGHTNESS) {
         return;
     }
-    // Solid highlight bar while selected — no hue crawl underneath.
+    // Solid highlight bar while selected â€” no hue crawl underneath.
     if (menu == LED_MENU && mod(encoderPos, 6) == 2) {
         return;
     }
@@ -2598,7 +2598,7 @@ void updateSelection() {
             partialRowY0 = menuRowY(row);
             partialRowY1 = partialRowY0;
             display.startWrite();
-            // Static color edits change LED_effect — keep "*" rows in sync.
+            // Static color edits change LED_effect â€” keep "*" rows in sync.
             if (ledMarksChanged) {
                 forceLedRadioRedraw = true;
             }
@@ -3325,7 +3325,7 @@ void formatShutoffTime(char* buf, size_t buflen, int fifteenMin) {
 }
 
 /**
- * Reset MultiWiFi credentials (SPIFFS + ESP flash) and restart.
+ * Reset MultiWiFi credentials (FFat + ESP flash) and restart.
  * After reboot the captive portal opens so new networks can be saved.
  */
 void resetWiFi() {
