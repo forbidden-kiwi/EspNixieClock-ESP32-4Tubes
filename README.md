@@ -9,13 +9,13 @@
 ![EspNixieClock](Images/Nixie%20Clock.JPEG)
 ![EspNixieClock](Images/Nixie%20Clock%20Front.JPEG)
 
-WiFi Nixie NTP clock firmware for a **4-tube** display, running on **Waveshare ESP32-C6-LCD-1.47** (onboard ST7789 TFT), with WS2812 tube backlight, seconds ring, and rotary encoder.
+WiFi Nixie NTP clock firmware for a **4-tube** display, running on **Waveshare ESP32-C6-LCD-1.47** (onboard ST7789 TFT, **4 MB flash**), with WS2812 tube backlight, seconds ring, and rotary encoder.
 
 Companion project: [EspNixieClock-ESP8266-6Tubes](https://github.com/forbidden-kiwi/EspNixieClock-ESP8266-6Tubes) (6 tubes, OLED).
 
 # Features
 
-- ESP32-based (Arduino IDE), board: **Waveshare ESP32-C6-LCD-1.47** (ST7789 320×172)
+- ESP32-based (Arduino IDE), board: **Waveshare ESP32-C6-LCD-1.47** (ST7789 320×172, 4 MB flash)
 - NTP time synchronisation
 - Captive-portal WiFi setup — **store up to 2 WiFi credentials** (MultiWiFi / ESP_WiFiManager) on **SPIFFS**
 - TFT + encoder menus: timezone, Auto DST (regional rules), 12/24h, colon blink, leading zero
@@ -31,27 +31,27 @@ Companion project: [EspNixieClock-ESP8266-6Tubes](https://github.com/forbidden-k
 1. Download the latest [release ZIP](https://github.com/forbidden-kiwi/EspNixieClock-ESP32-4Tubes/releases) (includes libraries).
 2. Copy `Software/libraries/*` into your Arduino sketchbook `libraries` folder.
 3. Open `Software/EspNC/EspNC.ino` in Arduino IDE.
-4. Select board settings as below (Waveshare ESP32-C6-LCD-1.47 demo defaults).
+4. Select board settings as below (**4 MB** — not 8 MB).
 5. Upload; connect to the WiFi portal shown on the TFT and save up to two networks.
 
 Pin map: `Software/EspNC/Globals.h`.
 
 ### Arduino IDE board settings
 
-Recommended Tools menu settings for **Waveshare ESP32-C6-LCD-1.47**:
+**Waveshare ESP32-C6-LCD-1.47** has **4 MB flash**. Using an 8 MB image/partition will boot-loop with:
 
-![Arduino IDE settings](Images/Arduino_IDE_ESP32C6_Settings.webp)
+`Detected size(4096k) smaller than the size in the binary image header(8192k)`.
 
 | Setting | Value |
 |--------|--------|
 | Board | ESP32C6 Dev Module |
-| USB CDC On Boot | Enabled |
-| Flash Size | 8MB (64Mb) |
-| Partition Scheme | **8M with spiffs (3MB APP/1.5MB SPIFFS)** |
+| USB CDC On Boot | **Enabled** |
+| Flash Size | **4MB (32Mb)** |
+| Partition Scheme | **Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)** |
 
-WiFi MultiWiFi credentials are stored on the **SPIFFS** partition — match the partition scheme above.
+WiFi MultiWiFi credentials are stored on the **SPIFFS** partition — keep the SPIFFS scheme above.
 
-Image source: [Waveshare ESP32-C6-LCD-1.47 documentation](https://www.waveshare.com/wiki/ESP32-C6-LCD-1.47).
+> Note: Some Waveshare demo screenshots show **8 MB / 8M with spiffs** for the **Touch** LCD variant. That does **not** apply to ESP32-C6-LCD-1.47 (non-touch, 4 MB).
 
 ### License
 
