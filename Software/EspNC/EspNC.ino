@@ -30,7 +30,7 @@
 #include "HvSupply.h"
 #include "GlobeImages.h"
 #include "Globals.h"
-#include "NeoPixelControl.h"
+#include "Ws2812Control.h"
 #include "WifiProvision.h"
 
 // WiFi configuration
@@ -585,9 +585,9 @@ static constexpr uint16_t rgb888To565(uint8_t r, uint8_t g, uint8_t b) {
     return (uint16_t)(((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3));
 }
 
-// Map NeoPixel RGB to TFT text color: full-scale chroma, with a violet bias so
+// Map WS2812 RGB to TFT text color: full-scale chroma, with a violet bias so
 // blue-heavy hues (violet/purple) do not collapse to plain blue on ST7789.
-static uint16_t neoPixelTo565(uint32_t c) {
+static uint16_t ws2812To565(uint32_t c) {
     uint8_t r = (uint8_t)((c >> 16) & 0xFF);
     uint8_t g = (uint8_t)((c >> 8) & 0xFF);
     uint8_t b = (uint8_t)(c & 0xFF);
@@ -629,7 +629,7 @@ static const char* const kStaticColorNames[] = {
     "blue", "violet", "purple", "magenta"
 };
 
-// Hand-tuned TFT colors (distinct on black). NeoPixel LEDs keep staticColors[].
+// Hand-tuned TFT colors (distinct on black). WS2812 LEDs keep staticColors[].
 static const uint16_t kStaticColorTft565[] = {
     rgb888To565(255, 48, 48),   // red
     rgb888To565(255, 72, 24),   // vermilion
@@ -654,7 +654,7 @@ static uint16_t rainbowGlyphColor(char ch, int letterIndex, void* ctx) {
     (void)ch;
     RainbowColorCtx* c = (RainbowColorCtx*)ctx;
     uint8_t hue = (uint8_t)(c->hueOffset + (letterIndex * 256) / c->colored);
-    return neoPixelTo565(Wheel(hue));
+    return ws2812To565(Wheel(hue));
 }
 
 // colorIndex: 0..11 static palette, 12 rainbow, 13 rainbow cycle
@@ -1048,7 +1048,7 @@ void setup() {
     myTZ = Timezone(myDST, mySTD);
 
     // Initialize components
-    initNeoPixels();
+    initWs2812();
     menu = TOP;
     topStaticDrawn = false;
     invalidateTopClock();

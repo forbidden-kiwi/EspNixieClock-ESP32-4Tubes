@@ -1,5 +1,5 @@
-#ifndef NEOPIXEL_CONTROL_H
-#define NEOPIXEL_CONTROL_H
+#ifndef WS2812_CONTROL_H
+#define WS2812_CONTROL_H
 
 #include <Adafruit_NeoPixel.h>
 #include "Globals.h"
@@ -39,7 +39,7 @@ extern int rainbowCycles;
 extern int rainbowCycleCycles;
 extern unsigned long pixelsInterval;
 
-void initNeoPixels();
+void initWs2812();
 /** Blank LEDs when tubes are off without changing LED_effect (menus show config). */
 void updateLEDs();
 void rainbowCycle();

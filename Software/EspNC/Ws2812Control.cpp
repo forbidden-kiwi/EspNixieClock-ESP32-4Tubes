@@ -1,10 +1,10 @@
-#include "NeoPixelControl.h"
+﻿#include "Ws2812Control.h"
 #include <TimeLib.h>
 
 // Provided by EspNC.ino
 extern bool nixieOn;
 
-Adafruit_NeoPixel strip(LED_COUNT, PIN_NEOPIXEL, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip(LED_COUNT, PIN_WS2812, NEO_GRB + NEO_KHZ800);
 
 int LedBrightness;
 int LedBrightnessPercentage;
@@ -137,7 +137,7 @@ static void updateSecondsRing() {
     }
 }
 
-void initNeoPixels() {
+void initWs2812() {
     strip.begin();
     strip.setBrightness(255);
     strip.show();

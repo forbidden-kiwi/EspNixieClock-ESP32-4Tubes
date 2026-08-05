@@ -1,15 +1,16 @@
-# EspNixieClock (ESP32)
-ESP32 Nixie Clock firmware with ST7789 TFT, NeoPixel tube/ring LEDs, and rotary encoder.
+﻿# EspNixieClock (ESP32)
+
+ESP32 Nixie Clock firmware for **Waveshare ESP32-C6-LCD-1.47**, with ST7789 TFT, WS2812 tube/ring LEDs, and rotary encoder.
 
 ## Features
 
-- ESP32-based (Arduino IDE)
-- NTP time synchronisation
+- ESP32-based (Arduino IDE), board: Waveshare ESP32-C6-LCD-1.47
+- NTP time synchronisation; captive portal stores **up to 2 WiFi credentials** (MultiWiFi)
 - ST7789 TFT and encoder for settings (timezone, DST, LEDs, auto shutoff, etc.)
 - Cathode protection (slot-machine digit cycling)
-- NeoPixel tube backlight and seconds ring
+- WS2812 tube backlight and seconds ring
 - Date display on the tubes
-- Captive-portal WiFi setup on first boot
+- Plug and play WiFi setup on first boot
 
 ### License
 

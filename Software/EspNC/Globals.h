@@ -26,8 +26,8 @@
 // Pin definition for DC/DC 170V enable
 #define PIN_HV_EN 1
 
-// NeoPixel strip: 4 tube backlights, then 60-LED seconds ring (same data line)
-#define PIN_NEOPIXEL 9
+// WS2812 strip: 4 tube backlights, then 60-LED seconds ring (same data line)
+#define PIN_WS2812 9
 #define TUBE_LED_COUNT 4
 #define RING_LED_COUNT 60
 #define LED_COUNT (TUBE_LED_COUNT + RING_LED_COUNT)
