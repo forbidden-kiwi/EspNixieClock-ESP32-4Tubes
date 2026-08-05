@@ -31,27 +31,29 @@ Companion project: [EspNixieClock-ESP8266-6Tubes](https://github.com/forbidden-k
 1. Download the latest [release ZIP](https://github.com/forbidden-kiwi/EspNixieClock-ESP32-4Tubes/releases) (includes libraries).
 2. Copy `Software/libraries/*` into your Arduino sketchbook `libraries` folder.
 3. Open `Software/EspNC/EspNC.ino` in Arduino IDE.
-4. Select board settings as below (**4 MB** — not 8 MB).
+4. Select board settings as below (**4 MB**).
 5. Upload; connect to the WiFi portal shown on the TFT and save up to two networks.
 
 Pin map: `Software/EspNC/Globals.h`.
 
 ### Arduino IDE board settings
 
-**Waveshare ESP32-C6-LCD-1.47** has **4 MB flash**. Using an 8 MB image/partition will boot-loop with:
+Waveshare reference (ESP32-C6-LCD-1.47 demo — **Flash Size 4MB**):
 
-`Detected size(4096k) smaller than the size in the binary image header(8192k)`.
+![Arduino IDE settings](Images/Arduino_IDE_ESP32C6_Settings.webp)
 
-| Setting | Value |
+Source: [Waveshare docs image](https://docs.waveshare.com/assets/images/ESP32-C6-LCD-1.47_Demo1-d799732cb7c77c47a8fe78182f4779fa.webp)
+
+| Setting | Value for this firmware |
 |--------|--------|
 | Board | ESP32C6 Dev Module |
-| USB CDC On Boot | **Enabled** |
-| Flash Size | **4MB (32Mb)** |
-| Partition Scheme | **Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)** |
+| USB CDC On Boot | **Enabled** (Serial Monitor over USB; Waveshare demo often leaves this Disabled) |
+| Flash Size | **4MB (32Mb)** (same as Waveshare screenshot) |
+| Partition Scheme | **No OTA (2MB APP/2MB SPIFFS)** |
 
-WiFi MultiWiFi credentials are stored on the **SPIFFS** partition — keep the SPIFFS scheme above.
+The Waveshare LVGL demo uses **No OTA (2MB APP/2MB FATFS)**. This firmware stores MultiWiFi credentials on **SPIFFS**, so use the **SPIFFS** counterpart above (not FATFS).
 
-> Note: Some Waveshare demo screenshots show **8 MB / 8M with spiffs** for the **Touch** LCD variant. That does **not** apply to ESP32-C6-LCD-1.47 (non-touch, 4 MB).
+Do **not** select 8 MB flash / 8M partitions (boot-loop: `Detected size(4096k) … header(8192k)`).
 
 ### License
 
