@@ -54,7 +54,7 @@ Mouser links are convenience lookups — verify package and voltage rating befor
 
 | Ref | Qty | Waveshare |
 |-----|-----|--------|
-| ESP32-C6 | | 1 | [Waveshare](https://www.waveshare.com/esp32-c6-lcd-1.47.htm) |
+| ESP32-C6 | 1 | [Waveshare](https://www.waveshare.com/esp32-c6-lcd-1.47.htm) |
 
 ## Notes
 
