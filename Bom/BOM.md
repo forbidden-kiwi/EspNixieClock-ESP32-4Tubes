@@ -58,6 +58,5 @@ Mouser links are convenience lookups — verify package and voltage rating befor
 
 ## Notes
 
-- Controller board: **Waveshare ESP32-C6-LCD-1.47** (not listed above — buy as module).
 - Schematics: [`Schematics/Schematics-v1.0-IN-17.pdf`](../Schematics/Schematics-v1.0-IN-17.pdf)
 - Gerbers: [`Gerber/EspNixie-IN-17-Gerber.zip`](../Gerber/EspNixie-IN-17-Gerber.zip), [`Gerber/Neopixel-1010-Ring-Gerber.zip`](../Gerber/Neopixel-1010-Ring-Gerber.zip)
