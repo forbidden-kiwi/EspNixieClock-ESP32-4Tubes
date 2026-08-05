@@ -1,6 +1,6 @@
 # Bill of Materials — EspNixie IN-17 (4 tubes)
 
-Parts for the main clock PCB. Source CSV: [`EspNixieIn17.csv`](EspNixieIn17.csv).
+Parts for the main clock PCB and Seconds Ring PCB. Source CSV: [`EspNixieIn17.csv`](EspNixieIn17.csv).
 
 The **60× WS2812 (1010)** LEDs belong to the [seconds ring PCB](../Gerber/Neopixel-1010-Ring-Gerber.zip). Tube backlight uses **SK6812MINI** (D1–D4) on the main board.
 
