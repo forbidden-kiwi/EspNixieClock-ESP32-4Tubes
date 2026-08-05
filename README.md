@@ -68,9 +68,6 @@ Neopixel 1010 seconds ring. Gerber: [Gerber/Neopixel-1010-Ring-Gerber.zip](Gerbe
 ![Neopixel 1010 Ring Front](Images/Neopixel-1010-Ring-Front.png)
 ![Neopixel 1010 Ring Back](Images/Neopixel-1010-Ring-Back.png)
 
-### License
-
-GNU General Public License v3.0
 
 ### Menu
 
@@ -81,3 +78,8 @@ GNU General Public License v3.0
 ![Seconds ring](Images/Seconds%20Ring%20Options%20Screen.JPEG)
 ![Date](Images/Date%20Options%20Sreen.JPEG)
 ![Screensaver](Images/Screensaver%20Options%20Menu.JPEG)
+
+### License
+
+GNU General Public License v3.0
+
