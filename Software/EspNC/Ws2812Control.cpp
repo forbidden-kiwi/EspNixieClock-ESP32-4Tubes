@@ -1,4 +1,4 @@
-﻿#include "Ws2812Control.h"
+#include "Ws2812Control.h"
 #include <TimeLib.h>
 
 // Provided by EspNC.ino
