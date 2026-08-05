@@ -4,7 +4,7 @@ Parts for the main clock PCB and Seconds Ring PCB. Source CSV: [`EspNixieIn17.cs
 
 The **60× WS2812 (1010)** LEDs belong to the [seconds ring PCB](../Gerber/Neopixel-1010-Ring-Gerber.zip). Tube backlight uses **SK6812MINI** (D1–D4) on the main board.
 
-Mouser links are convenience lookups — verify package and voltage rating before ordering.
+Supplier links (Mouser, AliExpress, Waveshare) are convenience lookups only. Listings can change, go out of stock, or move — they may not work when you read this. Always verify part number, package, and voltage rating before ordering.
 
 ## Capacitors
 
