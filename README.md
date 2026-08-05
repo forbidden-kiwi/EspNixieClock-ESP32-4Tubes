@@ -1,4 +1,4 @@
-﻿# EspNixieClock-ESP32-4Tubes
+# EspNixieClock-ESP32-4Tubes
 
 [![GPL license](https://img.shields.io/badge/license-GPL--3.0-blue)](https://github.com/forbidden-kiwi/EspNixieClock-ESP32-4Tubes?tab=GPL-3.0-1-ov-file#)
 [![Maintenance](https://img.shields.io/badge/maintained-yes-green)](https://github.com/forbidden-kiwi/EspNixieClock-ESP32-4Tubes/graphs/commit-activity)
@@ -52,6 +52,14 @@ Source: [Waveshare docs image](https://docs.waveshare.com/assets/images/ESP32-C6
 | Partition Scheme | **No OTA (2MB APP/2MB FATFS)** |
 
 Same flash size and partition scheme as the Waveshare demo (FFat / FATFS). Do **not** select 8 MB flash / 8M partitions (boot-loop: `Detected size(4096k) … header(8192k)`).
+
+### Hardware / PCB
+
+IN-17 4-tube main board (KiCad renders). Schematics: [`Schematics/Schematics-v1.0-IN-17.pdf`](Schematics/Schematics-v1.0-IN-17.pdf). Gerbers: [`Gerber/`](Gerber/).
+
+![PCB front](Images/EspNixie-IN-17-PCB-Front.png)
+![PCB front without tubes](Images/EspNixie-IN-17-PCB-Front-without-Tubes.png)
+![PCB back](Images/EspNixie-IN-17-PCB-Back.png)
 
 ### License
 
