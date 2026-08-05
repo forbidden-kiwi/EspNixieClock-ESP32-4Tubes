@@ -61,6 +61,13 @@ IN-17 4-tube main board (KiCad renders). Schematics: [`Schematics/Schematics-v1.
 ![PCB front without tubes](Images/EspNixie-IN-17-PCB-Front-without-Tubes.png)
 ![PCB back](Images/EspNixie-IN-17-PCB-Back.png)
 
+### Seconds ring PCB
+
+Neopixel 1010 seconds ring. Gerber: [Gerber/Neopixel-1010-Ring-Gerber.zip](Gerber/Neopixel-1010-Ring-Gerber.zip).
+
+![Neopixel 1010 Ring Back](Images/Neopixel-1010-Ring-Back.png)
+![Neopixel 1010 Ring Front](Images/Neopixel-1010-Ring-Front.png)
+
 ### License
 
 GNU General Public License v3.0
