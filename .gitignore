@@ -15,8 +15,10 @@ build/
 Thumbs.db
 desktop.ini
 
-# Archives / local packs
+# Archives / local packs (Gerber fabrication ZIPs are tracked)
 *.zip
+!Gerber/
+!Gerber/*.zip
 
 # Secrets (never commit)
 *.pem
