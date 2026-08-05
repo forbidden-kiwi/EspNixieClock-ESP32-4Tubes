@@ -38,11 +38,11 @@ Mouser links are convenience lookups — verify package and voltage rating befor
 | DS1, DS2 | A1C | — | 2 | [606-A1C-T](https://www.mouser.com/ProductDetail/606-A1C-T) |
 | D1–D4 | SK6812MINI | — | 4 | — |
 
-## Power
+## Nixie Power
 
-| Ref | Value | Footprint | Qty | Mouser |
+| Ref | Value | Footprint | Qty | Aliexpress |
 |-----|-------|-----------|-----|--------|
-| T1 | Nixie Power Supply | — | 1 | — |
+| T1 | Nixie Power Supply | — | 1 | (https://de.aliexpress.com/item/1005005526055820.html?spm=a2g0o.order_list.order_list_main.10.6cc75c5fxB74Xc&gatewayAdapt=glo2deu) |
 
 ## Seconds ring (separate PCB)
 
