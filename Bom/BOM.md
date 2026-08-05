@@ -32,17 +32,17 @@ Mouser links are convenience lookups — verify package and voltage rating befor
 
 ## Nixies / Dots / Backlight
 
-| Ref | Value | Footprint | Qty | Mouser |
-|-----|-------|-----------|-----|--------|
-| NX1–NX4 | IN-17 Nixie Tube | — | 4 | — |
-| DS1, DS2 | A1C | — | 2 | [606-A1C-T](https://www.mouser.com/ProductDetail/606-A1C-T) |
-| D1–D4 | SK6812MINI | — | 4 | — |
+| Ref | Value | Qty | Mouser |
+|-----|-------|-----|--------|
+| NX1–NX4 | IN-17 Nixie Tube | 4 | — |
+| DS1, DS2 | A1C | 2 | [606-A1C-T](https://www.mouser.com/ProductDetail/606-A1C-T) |
+| D1–D4 | SK6812MINI | 4 | — |
 
 ## Nixie Power Supply
 
-| Ref | Value | Footprint | Qty | Aliexpress |
-|-----|-------|-----------|-----|--------|
-| T1 | Nixie Power Supply | — | 1 | [Aliexpress](https://de.aliexpress.com/item/1005005526055820.html?spm=a2g0o.order_list.order_list_main.10.6cc75c5fxB74Xc&gatewayAdapt=glo2deu) |
+| Ref | Value | Qty | Aliexpress |
+|-----|-------|-----|--------|
+| T1 | Nixie Power Supply | 1 | [Aliexpress](https://de.aliexpress.com/item/1005005526055820.html?spm=a2g0o.order_list.order_list_main.10.6cc75c5fxB74Xc&gatewayAdapt=glo2deu) |
 
 ## Seconds ring (separate PCB)
 
