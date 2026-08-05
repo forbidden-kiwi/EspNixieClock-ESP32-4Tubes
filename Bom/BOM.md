@@ -42,13 +42,19 @@ Mouser links are convenience lookups — verify package and voltage rating befor
 
 | Ref | Value | Footprint | Qty | Aliexpress |
 |-----|-------|-----------|-----|--------|
-| T1 | Nixie Power Supply | — | 1 | (https://de.aliexpress.com/item/1005005526055820.html?spm=a2g0o.order_list.order_list_main.10.6cc75c5fxB74Xc&gatewayAdapt=glo2deu) |
+| T1 | Nixie Power Supply | — | 1 | [Aliexpress](https://de.aliexpress.com/item/1005005526055820.html?spm=a2g0o.order_list.order_list_main.10.6cc75c5fxB74Xc&gatewayAdapt=glo2deu) |
 
 ## Seconds ring (separate PCB)
 
 | Ref | Value | Footprint | Qty | Mouser |
 |-----|-------|-----------|-----|--------|
 | LED (Seconds Ring) | WS2812 | 1010 | 60 | — |
+
+## Waveshare ESP32-C6 1.47inch Display Development Board
+
+| Ref | Qty | Waveshare |
+|-----|-----|--------|
+| ESP32-C6 | | 1 | [Waveshare](https://www.waveshare.com/esp32-c6-lcd-1.47.htm) |
 
 ## Notes
 
