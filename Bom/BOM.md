@@ -38,7 +38,7 @@ Mouser links are convenience lookups — verify package and voltage rating befor
 | DS1, DS2 | A1C | — | 2 | [606-A1C-T](https://www.mouser.com/ProductDetail/606-A1C-T) |
 | D1–D4 | SK6812MINI | — | 4 | — |
 
-## Nixie Power
+## Nixie Power Supply
 
 | Ref | Value | Footprint | Qty | Aliexpress |
 |-----|-------|-----------|-----|--------|
