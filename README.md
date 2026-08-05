@@ -65,8 +65,8 @@ IN-17 4-tube main board (KiCad renders). Schematics: [`Schematics/Schematics-v1.
 
 Neopixel 1010 seconds ring. Gerber: [Gerber/Neopixel-1010-Ring-Gerber.zip](Gerber/Neopixel-1010-Ring-Gerber.zip).
 
-![Neopixel 1010 Ring Back](Images/Neopixel-1010-Ring-Back.png)
 ![Neopixel 1010 Ring Front](Images/Neopixel-1010-Ring-Front.png)
+![Neopixel 1010 Ring Back](Images/Neopixel-1010-Ring-Back.png)
 
 ### License
 
