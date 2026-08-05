@@ -54,7 +54,7 @@ Supplier links (Mouser, AliExpress, Waveshare) are convenience lookups only. Lis
 
 | Ref | Value | Qty | Aliexpress |
 |-----|-------|-----|--------|
-| ENC1 | KY-040 Rotary Encoder Module | 1 | [Aliexpress](https://www.aliexpress.com/item/1005005131093331.html) |
+| U5 | KY-040 Rotary Encoder Module | 1 | [Aliexpress](https://www.aliexpress.com/item/1005005131093331.html) |
 
 ## Waveshare ESP32-C6 1.47inch Display Development Board
 
