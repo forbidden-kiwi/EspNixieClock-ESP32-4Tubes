@@ -55,7 +55,7 @@ Same flash size and partition scheme as the Waveshare demo (FFat / FATFS). Do **
 
 ### Hardware / PCB
 
-IN-17 4-tube main board (KiCad renders). Schematics: [`Schematics/Schematics-v1.0-IN-17.pdf`](Schematics/Schematics-v1.0-IN-17.pdf). Gerbers: [`Gerber/`](Gerber/).
+IN-17 4-tube main board (KiCad renders). Schematics: [`Schematics/Schematics-v1.0-IN-17.pdf`](Schematics/Schematics-v1.0-IN-17.pdf). BOM: [`Bom/BOM.md`](Bom/BOM.md). Gerbers: [`Gerber/`](Gerber/).
 
 ![PCB front](Images/EspNixie-IN-17-PCB-Front.png)
 ![PCB front without tubes](Images/EspNixie-IN-17-PCB-Front-without-Tubes.png)
