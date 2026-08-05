@@ -31,10 +31,26 @@ Companion project: [EspNixieClock-ESP8266-6Tubes](https://github.com/forbidden-k
 1. Download the latest [release ZIP](https://github.com/forbidden-kiwi/EspNixieClock-ESP32-4Tubes/releases) (includes libraries).
 2. Copy `Software/libraries/*` into your Arduino sketchbook `libraries` folder.
 3. Open `Software/EspNC/EspNC.ino` in Arduino IDE.
-4. Board: **ESP32-C6 Dev Module**, USB CDC On Boot enabled, partition scheme with FFat (see Waveshare docs).
-5. Upload; connect to the WiFi portal shown on the TFT and save up to two networks.
+4. Select the Arduino IDE **Tools** settings for the Waveshare ESP32-C6 LCD board (see below), then upload.
+5. Connect to the WiFi portal shown on the TFT and save up to two networks.
 
 Pin map: `Software/EspNC/Globals.h`.
+
+#### Arduino IDE — board settings (Waveshare ESP32-C6-LCD-1.47)
+
+![Arduino IDE Tools settings](Images/Arduino_IDE_ESP32-C6_LCD_1.47_Tools_Settings.webp)
+
+Use at least:
+
+| Setting | Value |
+|--------|--------|
+| Board | **ESP32C6 Dev Module** |
+| USB CDC On Boot | **Enabled** |
+| Flash Size | **8MB (64Mb)** (as on Waveshare) |
+
+WiFi credentials in this firmware are stored on **FFat**. Prefer a partition scheme that includes FATFS (for example **No OTA (2MB APP / 2MB FATFS)**). The Waveshare demo screenshot above shows an SPIFFS scheme — that works for their demos, but EspNC needs FFat for MultiWiFi.
+
+Reference image from the [Waveshare ESP32-C6 LCD documentation](https://www.waveshare.com/wiki/ESP32-C6-LCD-1.47).
 
 ### License
 
