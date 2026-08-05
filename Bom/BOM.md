@@ -25,10 +25,10 @@ Mouser links are convenience lookups — verify package and voltage rating befor
 
 ## Semiconductors / ICs
 
-| Ref | Value | Footprint | Qty | Mouser |
-|-----|-------|-----------|-----|--------|
-| U2, U3 | HV5622PG-G | — | 2 | [689-HV5622PG-G](https://www.mouser.com/ProductDetail/689-HV5622PG-G) |
-| U4 | CD4504BM | — | 1 | [595-CD4504BM](https://www.mouser.com/ProductDetail/595-CD4504BM) |
+| Ref | Value | Qty | Mouser |
+|-----|-------|-----|--------|
+| U2, U3 | HV5622PG-G | 2 | [689-HV5622PG-G](https://www.mouser.com/ProductDetail/689-HV5622PG-G) |
+| U4 | CD4504BM | 1 | [595-CD4504BM](https://www.mouser.com/ProductDetail/595-CD4504BM) |
 
 ## Nixies / Dots / Backlight
 
@@ -46,9 +46,9 @@ Mouser links are convenience lookups — verify package and voltage rating befor
 
 ## Seconds ring (separate PCB)
 
-| Ref | Value | Footprint | Qty | Mouser |
+| Ref | Value | Footprint | Qty | Aliexpress |
 |-----|-------|-----------|-----|--------|
-| LED (Seconds Ring) | WS2812 | 1010 | 60 | — |
+| LED (Seconds Ring) | WS2812 | 1010 | 60 | [Aliexpress](https://de.aliexpress.com/item/1005008739048100.html?spm=a2g0o.order_list.order_list_main.17.6cc75c5fxB74Xc&gatewayAdapt=glo2deu) |
 
 ## Waveshare ESP32-C6 1.47inch Display Development Board
 
